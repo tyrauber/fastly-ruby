@@ -127,7 +127,7 @@ class Fastly
       rescue JSON::ParserError => _e
         resp.body
       rescue => _e
-        p _e
+        fail _e, resp.body
         p resp
     end
 
