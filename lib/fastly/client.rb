@@ -126,6 +126,9 @@ class Fastly
       JSON.parse(resp.body)
       rescue JSON::ParserError => _e
         resp.body
+      rescue => _e
+        p _e
+        p resp
     end
 
     def headers(extras={})
